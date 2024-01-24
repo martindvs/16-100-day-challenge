@@ -1,0 +1,254 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+* {
+  --font-poppins: "Poppins", sans-serif;
+  --font-open: "Open Sans", sans-serif;
+
+  /* ----- Variables ----- */
+  .col-1 {
+    flex-basis: 16%;
+  }
+
+  .col-2 {
+    flex-basis: 32%;
+  }
+
+  .col-3 {
+    flex-basis: 48%;
+  }
+
+  .col-4 {
+    flex-basis: 64%;
+  }
+
+  .col-5 {
+    flex-basis: 80%;
+  }
+
+  .col-6 {
+    flex-basis: 96%;
+  }
+
+  .b-1 {
+    align-self: flex-start;
+  }
+
+  .b-2 {
+    align-self: center;
+  }
+
+  .b-3 {
+    align-self: flex-end;
+  }
+  /* ### Colores primarios */
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+
+  /* ### Colores neutrales */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  /* ----------------------------- */
+  /* ----- Estilos generales ----- */
+  /* ----------------------------- */
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-open);
+  font-size: 15px;
+  background-image: url(../images/bg-desktop.svg);
+  background-color: var(--violet);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header {
+  border: 1px solid black;
+  width: 90%;
+  position: absolute;
+  top: 0;
+}
+header img {
+  margin-top: 45px;
+  width: 200px;
+}
+main {
+  margin-top: 0px;
+  border: 1px solid black;
+  width: 90%;
+  height: 60%;
+  display: flex;
+}
+main img {
+  width: 50%;
+  height: fit-content;
+}
+.text-box {
+  padding: 50px;
+  padding-top: 0;
+}
+h1 {
+  color: var(--white);
+  font-family: var(--font-poppins);
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+p {
+  color: rgb(206, 206, 206);
+  font-size: 1.27rem;
+  font-weight: 200;
+  line-height: 1.8rem;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+button {
+  color: var(--violet);
+  background-color: var(--white);
+  padding: 18px;
+  width: 38%;
+  border-radius: 29px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.425);
+  font-size: 1.2rem;
+}
+footer {
+  border: 1px solid black;
+  width: 90%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  color: var(--white);
+  display: flex;
+  justify-content: flex-end;
+}
+.icon-box {
+  border: 1px solid black;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-box i {
+  font-size: 1.4rem;
+  border: 2px solid white;
+  padding: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icon-box i:hover {
+  border: 2px solid var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+button:hover {
+  background-color: var(--soft-magenta);
+  color: var(--white);
+}
+
+@media screen and (min-width: 970px) and (max-width: 1250px) {
+  .text-box h1 {
+    font-size: 2.3rem;
+    line-height: 3.3rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 970px) {
+  .text-box h1 {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  body > * {
+    width: 75%;
+  }
+  header {
+    position: relative;
+  }
+  header img {
+    margin-top: 10%;
+    margin-bottom: 20%;
+    width: 45%;
+  }
+  main {
+    flex-direction: column;
+  }
+  main img {
+    width: 100%;
+  }
+  .text-box {
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-box h1 {
+    margin-top: 15%;
+    font-size: 180%;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+  p {
+    font-size: 115%;
+    line-height: 1.6rem;
+    text-align: center;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 5%;
+    width: 60%;
+  }
+  footer {
+    position: relative;
+    margin-bottom: 20%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+  }
+  .icon-box {
+    width: 50%;
+  }
+}
